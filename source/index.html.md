@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Vivian's API Reference
 
 language_tabs:
   - shell
@@ -186,4 +186,3 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
-
