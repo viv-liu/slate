@@ -91,7 +91,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;HTTP&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -101,7 +101,7 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="HTTP">HTTP</a>
               <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
@@ -128,9 +128,9 @@
 
 <p><strong>Edges</strong> are the connections between the nodes, like <em>isMemberOf</em> between a user and a group, and <em>isOwnerOf</em> between a user and a file.</p>
 
-<p><strong>insert simple graphic showing the example above</strong></p>
+<p><img src="images/microsoft-graph_hero-image.png" alt="Graph visualization that is slightly too complex." /></p>
 
-<p>In this overview, you learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.</p>
+<p>In this overview, you will learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.</p>
 
 <h2 id="introducing-the-graph-explorer">Introducing the Graph Explorer</h2>
 
@@ -138,7 +138,7 @@
 
 <p>To learn more about obtaining and using tokens, go to <strong>Managing your access token through REST</strong></p>
 
-<h4 id="api-versioning">API Versioning</h4>
+<h3 id="api-versioning">API Versioning</h3>
 
 <p>In Graph Explorer, you will choose which version of Microsoft Graph you will use.
 - v1.0 is the production ready tier of Graph. We promise no breaking changes as more features are added.
@@ -146,12 +146,10 @@
 
 <h2 id="send-a-mail">Send a mail</h2>
 
-<p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
-
-<p><strong>insert screenshot of graph explorer</strong></p>
-<pre class="highlight http"><code><span class="err">
-NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
-https://graph.microsoft.com/v1.0/me/sendMail
+<blockquote>
+<p>NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.</p>
+</blockquote>
+<pre class="highlight plaintext"><code>https://graph.microsoft.com/v1.0/me/sendMail
 {
   "Message": {
     "subject": "My second mail",
@@ -170,7 +168,11 @@ https://graph.microsoft.com/v1.0/me/sendMail
     ]
   }
 }
-</span></code></pre>
+</code></pre>
+<p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
+
+<p><img src="images/graph_explorer_sendmail.png" alt="Graph Explorer screenshot for sending mail." /></p>
+
 <p>Hit Go.</p>
 
 <p>Congrats, you just sent your first mail using Microsoft Graph!</p>
@@ -401,7 +403,7 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="HTTP">HTTP</a>
                 <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
