@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Vivian's API Reference</title>
+    <title>Vivian's MS Graph API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -120,13 +120,75 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="overview-of-microsoft-graph">Overview of Microsoft Graph</h1>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Microsoft Graph API is a RESTful interface that is used to interact with data in the Microsoft cloud. You can use Microsoft Graph in your applications to read, write, and traverse your users&rsquo; data through a single endpoint. Here&rsquo;s is what the Graph is made of:</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p><strong>Nodes</strong> are the objects you interact with, like users, groups, mail, calendar, files. Each node contains information about that node like <em>displayName</em> and <em>id</em>, stored as properties.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p><strong>Edges</strong> are the connections between the nodes, like <em>isMemberOf</em> between a user and a group, and <em>isOwnerOf</em> between a user and a file.</p>
+
+<p><strong>insert simple graphic showing the example above</strong></p>
+
+<p>In this overview, you learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.</p>
+
+<h2 id="introducing-the-graph-explorer">Introducing the Graph Explorer</h2>
+
+<p>The Graph Explorer is a simple way to get started with Microsoft Graph. Simply put, this is just a web app built on top of Microsoft Graph that takes in your HTTP requests and returns live responses right through the browser. All you have to do is sign in, and it will handle all the token exchanges to make your requests work.</p>
+
+<p>To learn more about obtaining and using tokens, go to <strong>Managing your access token through REST</strong></p>
+
+<h4 id="api-versioning">API Versioning</h4>
+
+<p>In Graph Explorer, you will choose which version of Microsoft Graph you will use.
+- v1.0 is the production ready tier of Graph. We promise no breaking changes as more features are added.
+- beta is the experimental tier of Graph. Features will be added here and then pushed to a production ready tier or otherwise removed. It is recommended you don&rsquo;t write production code against beta.</p>
+
+<h2 id="send-a-mail">Send a mail</h2>
+
+<p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
+
+<p><strong>insert screenshot of graph explorer</strong></p>
+<pre class="highlight http"><code><span class="err">
+NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
+https://graph.microsoft.com/v1.0/me/sendMail
+{
+  "Message": {
+    "subject": "My second mail",
+    "body": {
+      "contentType": "text",
+      "content": "Hello world again!"
+    },
+    "bodyPreview": "hello!",
+    "toRecipients": [
+      {
+        "emailAddress": {
+          "name": "Vivian",
+          "address": "viv.liu25@gmail.com"
+        }
+      }
+    ]
+  }
+}
+</span></code></pre>
+<p>Hit Go.</p>
+
+<p>Congrats, you just sent your first mail using Microsoft Graph!</p>
+
+<p>The response contains an HTTP status code to tell you the success or failure state of your request. To learn more about error codes and some of the causes, visit <strong>Errors</strong>.</p>
+
+<p>MVP for setting up a tenant/MSA?
+What works for MSA &ldquo;tenant&rdquo; vs AAD tenant?  </p>
+
+<h2 id="browse-your-drive">Browse your drive</h2>
+
+<p>Make sure you are signed into Graph Explorer.
+Select v1.0 and GET from the dropdowns, and enter the following request URL.</p>
+<pre class="highlight plaintext"><code>https://graph.microsoft.com/v1.0/drives
+</code></pre>
+<p>Hit Go.</p>
+
+<p>This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through <strong>a OneDrive tutorial</strong>.</p>
 
 <h1 id="authentication">Authentication</h1>
 
