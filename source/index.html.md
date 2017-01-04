@@ -2,7 +2,7 @@
 title: Vivian's MS Graph API Reference
 
 language_tabs:
-  - shell
+  - HTTP
   - ruby
   - python
   - javascript
@@ -25,28 +25,26 @@ Microsoft Graph API is a RESTful interface that is used to interact with data in
 
 **Edges** are the connections between the nodes, like *isMemberOf* between a user and a group, and *isOwnerOf* between a user and a file.
 
-**insert simple graphic showing the example above**
+![Graph visualization that is slightly too complex.](./images/microsoft-graph_hero-image.png)
 
-In this overview, you learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.
+In this overview, you will learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.
 
 ## Introducing the Graph Explorer
 The Graph Explorer is a simple way to get started with Microsoft Graph. Simply put, this is just a web app built on top of Microsoft Graph that takes in your HTTP requests and returns live responses right through the browser. All you have to do is sign in, and it will handle all the token exchanges to make your requests work.
 
 To learn more about obtaining and using tokens, go to **Managing your access token through REST**
 
-#### API Versioning
+### API Versioning
+
 In Graph Explorer, you will choose which version of Microsoft Graph you will use.
 - v1.0 is the production ready tier of Graph. We promise no breaking changes as more features are added.
 - beta is the experimental tier of Graph. Features will be added here and then pushed to a production ready tier or otherwise removed. It is recommended you don't write production code against beta.
 
 ## Send a mail
-Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account **if you are an administrator (because they have to consent to Graph Explorer).** Select v1.0 and POST from the dropdowns, and enter the following request and body.
 
-**insert screenshot of graph explorer**
+> NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
 
-```http
-
-NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
+```HTTP
 https://graph.microsoft.com/v1.0/me/sendMail
 {
   "Message": {
@@ -67,6 +65,10 @@ https://graph.microsoft.com/v1.0/me/sendMail
   }
 }
 ```
+Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account **if you are an administrator (because they have to consent to Graph Explorer).** Select v1.0 and POST from the dropdowns, and enter the following request and body.
+
+![Graph Explorer screenshot for sending mail.](./images/graph_explorer_sendmail.png)
+
 Hit Go.
 
 Congrats, you just sent your first mail using Microsoft Graph!
