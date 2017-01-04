@@ -22,7 +22,7 @@ search: true
  API endpoint
 
 ```http
-http://graph.microsoft.com/v1.0
+GET https://graph.microsoft.com/v1.0 HTTP/1.1
 ```
 Microsoft Graph API is a RESTful interface that is used to interact with data in the Microsoft cloud. You can use Microsoft Graph in your applications to read, write, and traverse your users' data through a single endpoint. Here's is what the Graph is made of:
 
@@ -50,7 +50,7 @@ In Graph Explorer, you will choose which version of Microsoft Graph you will use
 > NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
 
 ```http
-POST https://graph.microsoft.com/v1.0/me/sendMail
+POST https://graph.microsoft.com/v1.0/me/sendMail HTTP/1.1
 {
   "Message": {
     "subject": "My second mail",
@@ -86,7 +86,7 @@ What works for MSA "tenant" vs AAD tenant?
 ## Browse your drive
 
 ```http
-GET https://graph.microsoft.com/v1.0/drives
+GET https://graph.microsoft.com/v1.0/drives HTTP/1.1
 ```
 
 Make sure you are signed into Graph Explorer.
