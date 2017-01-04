@@ -1,5 +1,5 @@
 ---
-title: Vivian's API Reference
+title: Vivian's MS Graph API Reference
 
 language_tabs:
   - shell
@@ -17,13 +17,75 @@ includes:
 search: true
 ---
 
-# Introduction
+# Overview of Microsoft Graph
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Microsoft Graph API is a RESTful interface that is used to interact with data in the Microsoft cloud. You can use Microsoft Graph in your applications to read, write, and traverse your users' data through a single endpoint. Here's is what the Graph is made of:
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+**Nodes** are the objects you interact with, like users, groups, mail, calendar, files. Each node contains information about that node like *displayName* and *id*, stored as properties.
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+**Edges** are the connections between the nodes, like *isMemberOf* between a user and a group, and *isOwnerOf* between a user and a file.
+
+**insert simple graphic showing the example above**
+
+In this overview, you learn how to send a mail and browse your drive using Microsoft Graph through the Graph Explorer.
+
+## Introducing the Graph Explorer
+The Graph Explorer is a simple way to get started with Microsoft Graph. Simply put, this is just a web app built on top of Microsoft Graph that takes in your HTTP requests and returns live responses right through the browser. All you have to do is sign in, and it will handle all the token exchanges to make your requests work.
+
+To learn more about obtaining and using tokens, go to **Managing your access token through REST**
+
+#### API Versioning
+In Graph Explorer, you will choose which version of Microsoft Graph you will use.
+- v1.0 is the production ready tier of Graph. We promise no breaking changes as more features are added.
+- beta is the experimental tier of Graph. Features will be added here and then pushed to a production ready tier or otherwise removed. It is recommended you don't write production code against beta.
+
+## Send a mail
+Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account **if you are an administrator (because they have to consent to Graph Explorer).** Select v1.0 and POST from the dropdowns, and enter the following request and body.
+
+**insert screenshot of graph explorer**
+
+```http
+
+NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
+https://graph.microsoft.com/v1.0/me/sendMail
+{
+  "Message": {
+    "subject": "My second mail",
+    "body": {
+      "contentType": "text",
+      "content": "Hello world again!"
+    },
+    "bodyPreview": "hello!",
+    "toRecipients": [
+      {
+        "emailAddress": {
+          "name": "Vivian",
+          "address": "viv.liu25@gmail.com"
+        }
+      }
+    ]
+  }
+}
+```
+Hit Go.
+
+Congrats, you just sent your first mail using Microsoft Graph!
+
+The response contains an HTTP status code to tell you the success or failure state of your request. To learn more about error codes and some of the causes, visit **Errors**.
+
+MVP for setting up a tenant/MSA?
+What works for MSA "tenant" vs AAD tenant?  
+
+## Browse your drive
+Make sure you are signed into Graph Explorer.
+Select v1.0 and GET from the dropdowns, and enter the following request URL.
+
+```HTTP
+https://graph.microsoft.com/v1.0/drives
+```
+Hit Go.
+
+This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through **a OneDrive tutorial**.
 
 # Authentication
 
