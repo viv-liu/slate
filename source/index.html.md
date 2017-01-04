@@ -2,7 +2,7 @@
 title: Vivian's MS Graph API Reference
 
 language_tabs:
-  - HTTP
+  - http
   - ruby
   - python
   - javascript
@@ -19,6 +19,11 @@ search: true
 
 # Overview of Microsoft Graph
 
+ API endpoint
+
+```http
+http://graph.microsoft.com/v1.0
+```
 Microsoft Graph API is a RESTful interface that is used to interact with data in the Microsoft cloud. You can use Microsoft Graph in your applications to read, write, and traverse your users' data through a single endpoint. Here's is what the Graph is made of:
 
 **Nodes** are the objects you interact with, like users, groups, mail, calendar, files. Each node contains information about that node like *displayName* and *id*, stored as properties.
@@ -44,8 +49,8 @@ In Graph Explorer, you will choose which version of Microsoft Graph you will use
 
 > NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
 
-```HTTP
-https://graph.microsoft.com/v1.0/me/sendMail
+```http
+POST https://graph.microsoft.com/v1.0/me/sendMail
 {
   "Message": {
     "subject": "My second mail",
@@ -79,12 +84,14 @@ MVP for setting up a tenant/MSA?
 What works for MSA "tenant" vs AAD tenant?  
 
 ## Browse your drive
+
+```http
+GET https://graph.microsoft.com/v1.0/drives
+```
+
 Make sure you are signed into Graph Explorer.
 Select v1.0 and GET from the dropdowns, and enter the following request URL.
 
-```HTTP
-https://graph.microsoft.com/v1.0/drives
-```
 Hit Go.
 
 This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through **a OneDrive tutorial**.
