@@ -123,8 +123,8 @@
         <h1 id="overview-of-microsoft-graph">Overview of Microsoft Graph</h1>
 
 <p>API endpoint</p>
-<pre class="highlight http"><code><span class="err">http://graph.microsoft.com/v1.0
-</span></code></pre>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://graph.microsoft.com/v1.0</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre>
 <p>Microsoft Graph API is a RESTful interface that is used to interact with data in the Microsoft cloud. You can use Microsoft Graph in your applications to read, write, and traverse your users&rsquo; data through a single endpoint. Here&rsquo;s is what the Graph is made of:</p>
 
 <p><strong>Nodes</strong> are the objects you interact with, like users, groups, mail, calendar, files. Each node contains information about that node like <em>displayName</em> and <em>id</em>, stored as properties.</p>
@@ -152,26 +152,26 @@
 <blockquote>
 <p>NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.</p>
 </blockquote>
-<pre class="highlight http"><code><span class="err">POST https://graph.microsoft.com/v1.0/me/sendMail
-{
-  "Message": {
-    "subject": "My second mail",
-    "body": {
-      "contentType": "text",
-      "content": "Hello world again!"
-    },
-    "bodyPreview": "hello!",
-    "toRecipients": [
-      {
-        "emailAddress": {
-          "name": "Vivian",
-          "address": "viv.liu25@gmail.com"
-        }
-      }
-    ]
-  }
-}
-</span></code></pre>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">https://graph.microsoft.com/v1.0/me/sendMail</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="s">{</span>
+<span class="s">  "Message": {</span>
+<span class="s">    "subject": "My second mail",</span>
+<span class="s">    "body": {</span>
+<span class="s">      "contentType": "text",</span>
+<span class="s">      "content": "Hello world again!"</span>
+<span class="s">    },</span>
+<span class="s">    "bodyPreview": "hello!",</span>
+<span class="s">    "toRecipients": [</span>
+<span class="s">      {</span>
+<span class="s">        "emailAddress": {</span>
+<span class="s">          "name": "Vivian",</span>
+<span class="s">          "address": "viv.liu25@gmail.com"</span>
+<span class="s">        }</span>
+<span class="s">      }</span>
+<span class="s">    ]</span>
+<span class="s">  }</span>
+<span class="s">}</span>
+</code></pre>
 <p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
 
 <p><img src="images/graph_explorer_sendmail.png" alt="Graph Explorer screenshot for sending mail." /></p>
@@ -186,8 +186,8 @@
 What works for MSA &ldquo;tenant&rdquo; vs AAD tenant?  </p>
 
 <h2 id="browse-your-drive">Browse your drive</h2>
-<pre class="highlight http"><code><span class="err">GET https://graph.microsoft.com/v1.0/drives
-</span></code></pre>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://graph.microsoft.com/v1.0/drives</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre>
 <p>Make sure you are signed into Graph Explorer.
 Select v1.0 and GET from the dropdowns, and enter the following request URL.</p>
 
