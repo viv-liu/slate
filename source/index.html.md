@@ -19,7 +19,7 @@ search: true
 
 # Overview of Microsoft Graph
 
- API endpoint
+> API endpoint
 
 ```http
 GET https://graph.microsoft.com/v1.0 HTTP/1.1
@@ -47,6 +47,12 @@ In Graph Explorer, you will choose which version of Microsoft Graph you will use
 
 ## Send a mail
 
+Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account **if you are an administrator (because they have to consent to Graph Explorer).** Select v1.0 and POST from the dropdowns, and enter the following request and body.
+
+![Graph Explorer screenshot for sending mail.](./images/graph_explorer_sendmail.png)
+
+Hit Go.
+
 > NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.
 
 ```http
@@ -70,11 +76,6 @@ POST https://graph.microsoft.com/v1.0/me/sendMail HTTP/1.1
   }
 }
 ```
-Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account **if you are an administrator (because they have to consent to Graph Explorer).** Select v1.0 and POST from the dropdowns, and enter the following request and body.
-
-![Graph Explorer screenshot for sending mail.](./images/graph_explorer_sendmail.png)
-
-Hit Go.
 
 Congrats, you just sent your first mail using Microsoft Graph!
 
@@ -85,14 +86,14 @@ What works for MSA "tenant" vs AAD tenant?
 
 ## Browse your drive
 
-```http
-GET https://graph.microsoft.com/v1.0/drives HTTP/1.1
-```
-
 Make sure you are signed into Graph Explorer.
 Select v1.0 and GET from the dropdowns, and enter the following request URL.
 
 Hit Go.
+
+```http
+GET https://graph.microsoft.com/v1.0/drives HTTP/1.1
+```
 
 This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through **a OneDrive tutorial**.
 
@@ -135,6 +136,60 @@ Kittn expects for the API key to be included in all API requests to the server i
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
+
+# Use the API Better
+## Paging
+## Batching (not available)
+## Errors
+## Debugging
+## Customizing your query
+
+# Tutorials
+
+On this page we will cover the most basic scenarios that require a one-line code snippet. More advanced scenarios can be found in the sub categories.
+
+### Get my inbox
+> http code
+### Get my drive
+> http code
+### Who is my manager
+> http code
+### Download a file from drive
+> http code
+
+## Send user push notifications
+## Get mail changes since last query
+## Attach a file to mail
+## Find closest contacts
+## Create an Excel spreadsheet
+
+# Deep drives
+## Delta query
+## Sovereign Deployments
+## Hybrid Deployments
+## OneDrive Architecture
+
+# Reference
+## Users
+## Outlook
+## OneDrive
+## Directory
+## ...
+
+# Beta Reference
+
+> API endpoint
+
+```http
+GET https://graph.microsoft.com/beta HTTP/1.1
+```
+Beta is the experimental tier of Graph. You can try out features here that are experimental, and provide us with feedback so that we can push to a production ready tier such as v1.0 or a future v2.0 or otherwise remove it. It is recommended you don't write production code against beta.
+
+## Users
+## Outlook
+## OneDrive
+## Directory
+## ...
 
 # Kittens
 
