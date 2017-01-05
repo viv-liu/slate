@@ -151,6 +151,12 @@
 
 <h2 id="send-a-mail">Send a mail</h2>
 
+<p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
+
+<p><img src="images/graph_explorer_sendmail.png" alt="Graph Explorer screenshot for sending mail." /></p>
+
+<p>Hit Go.</p>
+
 <blockquote>
 <p>NOTE THIS MESSAGE WAS MARKED AS SPAM IN GMAIL. NEED TO FIGURE OUT WHY.</p>
 </blockquote>
@@ -174,12 +180,6 @@
 <span class="s">  }</span>
 <span class="s">}</span>
 </code></pre>
-<p>Sign into Graph Explorer using your Microsoft account (Outlook, Live, Hotmail) or Office365 account <strong>if you are an administrator (because they have to consent to Graph Explorer).</strong> Select v1.0 and POST from the dropdowns, and enter the following request and body.</p>
-
-<p><img src="images/graph_explorer_sendmail.png" alt="Graph Explorer screenshot for sending mail." /></p>
-
-<p>Hit Go.</p>
-
 <p>Congrats, you just sent your first mail using Microsoft Graph!</p>
 
 <p>The response contains an HTTP status code to tell you the success or failure state of your request. To learn more about error codes and some of the causes, visit <strong>Errors</strong>.</p>
@@ -188,13 +188,13 @@
 What works for MSA &ldquo;tenant&rdquo; vs AAD tenant?  </p>
 
 <h2 id="browse-your-drive">Browse your drive</h2>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://graph.microsoft.com/v1.0/drives</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-</code></pre>
+
 <p>Make sure you are signed into Graph Explorer.
 Select v1.0 and GET from the dropdowns, and enter the following request URL.</p>
 
 <p>Hit Go.</p>
-
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://graph.microsoft.com/v1.0/drives</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre>
 <p>This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through <strong>a OneDrive tutorial</strong>.</p>
 
 <h1 id="authentication">Authentication</h1>
@@ -228,6 +228,91 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
+
+<h1 id="use-the-api-better">Use the API Better</h1>
+
+<h2 id="paging">Paging</h2>
+
+<h2 id="batching-not-available">Batching (not available)</h2>
+
+<h2 id="errors">Errors</h2>
+
+<h2 id="debugging">Debugging</h2>
+
+<h2 id="customizing-your-query">Customizing your query</h2>
+
+<h1 id="tutorials">Tutorials</h1>
+
+<p>On this page we will cover the most basic scenarios that require a one-line code snippet. More advanced scenarios can be found in the sub categories.</p>
+
+<h3 id="get-my-inbox">Get my inbox</h3>
+
+<blockquote>
+<p>http code</p>
+
+<h3 id="get-my-drive">Get my drive</h3>
+
+<p>http code</p>
+
+<h3 id="who-is-my-manager">Who is my manager</h3>
+
+<p>http code</p>
+
+<h3 id="download-a-file-from-drive">Download a file from drive</h3>
+
+<p>http code</p>
+</blockquote>
+
+<h2 id="send-user-push-notifications">Send user push notifications</h2>
+
+<h2 id="get-mail-changes-since-last-query">Get mail changes since last query</h2>
+
+<h2 id="attach-a-file-to-mail">Attach a file to mail</h2>
+
+<h2 id="find-closest-contacts">Find closest contacts</h2>
+
+<h2 id="create-an-excel-spreadsheet">Create an Excel spreadsheet</h2>
+
+<h1 id="deep-drives">Deep drives</h1>
+
+<h2 id="delta-query">Delta query</h2>
+
+<h2 id="sovereign-deployments">Sovereign Deployments</h2>
+
+<h2 id="hybrid-deployments">Hybrid Deployments</h2>
+
+<h2 id="onedrive-architecture">OneDrive Architecture</h2>
+
+<h1 id="reference">Reference</h1>
+
+<h2 id="users">Users</h2>
+
+<h2 id="outlook">Outlook</h2>
+
+<h2 id="onedrive">OneDrive</h2>
+
+<h2 id="directory">Directory</h2>
+
+<h2 id=">&hellip;</h2>
+
+<h1 id="beta-reference">Beta Reference</h1>
+
+<blockquote>
+<p>API endpoint</p>
+</blockquote>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">https://graph.microsoft.com/beta</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre>
+<p>Beta is the experimental tier of Graph. You can try out features here that are experimental, and provide us with feedback so that we can push to a production ready tier such as v1.0 or a future v2.0 or otherwise remove it. It is recommended you don&rsquo;t write production code against beta.</p>
+
+<h2 id="users">Users</h2>
+
+<h2 id="outlook">Outlook</h2>
+
+<h2 id="onedrive">OneDrive</h2>
+
+<h2 id="directory">Directory</h2>
+
+<h2 id=">&hellip;</h2>
 
 <h1 id="kittens">Kittens</h1>
 
