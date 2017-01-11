@@ -135,7 +135,7 @@ On this page we will cover the most basic scenarios that require a one-line code
 ## Outlook
 ## OneDrive
 ## Directory
-## ...
+## And much much more
 
 # Beta Reference
 
@@ -150,11 +150,9 @@ Beta is the experimental tier of Graph. You can try out features here that are e
 ## Outlook
 ## OneDrive
 ## Directory
-## ...
+## Kittens
 
-# Kittens
-
-## Get All Kittens
+### Get All Kittens
 
 ```ruby
 require 'kittn'
@@ -220,7 +218,7 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+### Get a Specific Kitten
 
 ```ruby
 require 'kittn'
