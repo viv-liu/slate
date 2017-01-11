@@ -197,49 +197,19 @@ Select v1.0 and GET from the dropdowns, and enter the following request URL.</p>
 </code></pre>
 <p>This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through <strong>a OneDrive tutorial</strong>.</p>
 
-<h1 id="authentication">Authentication</h1>
+<h1 id="use-the-api-better">Use the API better</h1>
 
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="use-the-api-better">Use the API Better</h1>
+<h2 id="accessing-user-data">Accessing user data</h2>
 
 <h2 id="paging">Paging</h2>
 
-<h2 id="batching-not-available">Batching (not available)</h2>
+<h2 id="batching-not-yet-available">Batching (not yet available)</h2>
 
 <h2 id="errors">Errors</h2>
 
 <h2 id="debugging">Debugging</h2>
 
-<h2 id="customizing-your-query">Customizing your query</h2>
+<h2 id="customize-query">Customize query</h2>
 
 <h1 id="tutorials">Tutorials</h1>
 
@@ -273,7 +243,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <h2 id="create-an-excel-spreadsheet">Create an Excel spreadsheet</h2>
 
-<h1 id="deep-drives">Deep drives</h1>
+<h1 id="deep-drives-concepts">Deep drives/Concepts</h1>
 
 <h2 id="delta-query">Delta query</h2>
 
