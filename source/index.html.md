@@ -97,52 +97,13 @@ GET https://graph.microsoft.com/v1.0/drives HTTP/1.1
 
 This lets you see the OneDrive documents you have under this account. You can create a new folder, navigate through folders, and download files through **a OneDrive tutorial**.
 
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Use the API Better
+# Use the API better
+## Accessing user data
 ## Paging
-## Batching (not available)
+## Batching (not yet available)
 ## Errors
 ## Debugging
-## Customizing your query
+## Customize query
 
 # Tutorials
 
@@ -163,7 +124,7 @@ On this page we will cover the most basic scenarios that require a one-line code
 ## Find closest contacts
 ## Create an Excel spreadsheet
 
-# Deep drives
+# Deep drives/Concepts
 ## Delta query
 ## Sovereign Deployments
 ## Hybrid Deployments
